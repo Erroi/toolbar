@@ -1,0 +1,78 @@
+
+//工具条文件 供任意地方工具条调用
+
+$toolbar-size:52px;
+//提取代码  @mixin关键字
+@mixin toolbar-item($pos,$hoverpos){
+	background-position: 0 $pos;
+
+	&:hover{
+		background-position:0 $hoverpos;
+	}
+}
+
+.toolbar{
+	position:fixed;
+	left:50%;
+	bottom:5px;
+	margin-left:-$toolbar-size / 2;
+}
+.toolbar-item{
+	position: relative;
+	display:block;
+	width:$toolbar-size;
+	height:$toolbar-size;
+	background-image: url(../img/toolbar.png);
+	background-repeat: no-repeat;
+	margin-top:1px;
+	@include transition(background-position 1s);
+
+	&:hover{
+		.toolbar-layer{
+			// opacity:1;
+			// filter:alpha(opacity=100);
+			@include opacity(1);
+			// transform:scale(1);
+			@include scale(1);
+		}
+	}
+}
+.toolbar-item-weixin{
+	@include toolbar-item(-798px,-860px);
+
+	.toolbar-layer{
+		height:212px;
+		background-position: 0 0;
+	}
+}
+.toolbar-item-feedback{
+	@include toolbar-item(-426px,-488px);
+}
+.toolbar-item-app{
+	@include toolbar-item(-550px,-612px);
+
+	.toolbar-layer{
+		height:194px;
+		background-position: 0 -222px;
+	}
+}
+.toolbar-item-top{
+	@include toolbar-item(-674px,-736px);
+}
+.toolbar-layer{
+	position: absolute;
+	right:$toolbar-size - 6;
+	bottom: -10px;
+	width:172px;
+	background-image: url(../img/toolbar.png);
+	background-repeat: no-repeat;
+	// opacity:0;
+	// filter: alpha(opacity=0);
+	@include opacity(0);
+	// transform-origin:95% 95%;
+	@include transform-origin(95% 95%);
+	// transform: scale(0.01);
+	@include scale(0.01);
+	// transition: all 1s;
+	@include transition(all 1s);
+}
