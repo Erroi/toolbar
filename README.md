@@ -32,17 +32,17 @@ ul{
 2 $变量
 $toolbar-size : 52px;
 
- 3 @mixin 函数名(参数)
+ 3 @mixin 函数名(参数)      //定义代码片段
  
 @mixin opacity($opacity){
        opacity:$opacity;
        filter:alpha(opacity=$opacity*100) 
 }
 
- 4 @include 函数    调用
+ 4 @include 函数    //调用某代码片段
 @include opacity(0.1)
 
-5 @import "xxx"   引入xxx.scss
+5 @import "xxx"   引入xxx.scss   //引入某某模块
 
 @import "toolbar"
 
@@ -53,7 +53,8 @@ $toolbar-size : 52px;
     ....
 }
 .box2{
-     @extend  .box;
+     @extend  .box;        //拓展.box的属性  
+     border:solid #ccc 1px;
 }
 
  
