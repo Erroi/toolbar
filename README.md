@@ -56,6 +56,8 @@ $toolbar-size : 52px;
      @extend  .box;        //拓展.box的属性  
      border:solid #ccc 1px;
 }
+7 数学计算 calc(+ - * /)
+  left:calc(15% + 20px);
 
  
 
