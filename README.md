@@ -58,6 +58,16 @@ $toolbar-size : 52px;
 }
 7 数学计算 calc(+ - * /)
   left:calc(15% + 20px);
+8 @at-root 防止层级嵌套更深，影响性能
+      .img-sec{
+        position:relative;
+
+        @at-root{           //表示 .img-sec .img-figure{}
+          .img-figure{
+
+          }
+        }
+      }
 
  
 
