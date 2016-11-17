@@ -32,6 +32,7 @@ data-main指定的是入口文件，在require.js加载完后，会第一个自�
 
 2.$变量
 `$toolbar-size:52px;`
+
 3.@mixin 函数名(参数)      //定义代码片段
 
 	@mixin opacity($opacity){
@@ -41,8 +42,10 @@ data-main指定的是入口文件，在require.js加载完后，会第一个自�
 	
 4.@include 函数名          //调用某代码片段
 `include opacity(0.1)`
+
 5.@import "xxx"     //引入xxx.scss   引入某某模块
 @import "toolbar"
+
 6 @extend  继承
 
 	.box{
@@ -52,8 +55,11 @@ data-main指定的是入口文件，在require.js加载完后，会第一个自�
 		@extend .box;
 		border:solid #ccc 1px;
 		}
+	
+
 7.数学计算  calc(+ - * /)
 `left:calc(15% + 20px);`
+
 8 @at-root 防止层级嵌套更深，影响性能
 	
 	img-sec{
