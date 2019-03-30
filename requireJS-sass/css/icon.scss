@@ -1,5 +1,5 @@
 $toolbar-size:52px;
-//ÌáÈ¡´úÂë  @mixin¹Ø¼ü×Ö
+//æå–ä»£ç   @mixinå…³é”®å­—
 @mixin toolbar-item($pos,$hoverpos){
 	background-position: 0 $pos;
 
@@ -8,9 +8,9 @@ $toolbar-size:52px;
 	}
 }
 
-//·â×°transition ¼æÈİ¸÷ä¯ÀÀÆ÷
+//å°è£…transition å…¼å®¹å„ä¸ªæµè§ˆå™¨
 @import "mixin";
-//³éÀë³Éµ¥¸öÎÄ¼ş Í¨¹ı@importÒıÓÃ
+//æŠ½ç¦»æˆå•ä¸ªæ–‡ä»¶  é€šè¿‡@importå¼•ç”¨
 
 // @mixin transition($transition){
 // 	-webkit-transition:$transition;
@@ -46,7 +46,7 @@ $toolbar-size:52px;
 
 
 
-//Ò²¿ÉÒÔÍ¨¹ı @import "toolbar"  µ÷ÓÃ¹¤¾ßÌõ ¶ø¿ÉÒÔ×¢ÊÍµôÆäËûÄÚÈİ
+//ä¹Ÿå¯ä»¥é€šè¿‡ @import "toolbar"  è°ƒç”¨å·¥å…·æ¡ è€Œå¯ä»¥æ³¨é‡Šæ‰å…¶ä»–å†…å®¹
 
 .toolbar{
 	position:fixed;

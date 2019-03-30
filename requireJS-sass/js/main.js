@@ -6,7 +6,7 @@ requirejs.config({
 
 requirejs(['jquery','scrollto'],function($,scrollto){
     //实例化一个ScrollTo函数 通过构造函数的形式
-    var scroll = new scrollto.ScrollTo({
+    var scroll = new scrollto.ScrollTo({          // 调用scrollto模块的ScrollTo函数
     	dest:500,
     	speed:800
     })
