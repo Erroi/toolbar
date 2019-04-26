@@ -71,3 +71,62 @@ data-main指定的是入口文件，在require.js加载完后，会第一个自�
 		}		
 	}
 	
+
+#### less
+
+* 1.变量
+
+		@color: #4D926F;
+
+		#header {
+		color: @color;
+		}
+		h2 {
+		color: @color;
+		}
+
+* 2.混合
+
+		.radius(@radius: 5px) {
+			border-radius: @radius;
+		}
+		#header{
+			.radius;
+		}
+		#footer{
+			.radius(20px);
+		}
+
+* 3.嵌套
+
+		#header {
+			h1 {
+				font-size: 26px;
+				font-weight: bold;
+			}
+			p { font-size: 12px;
+				a { text-decoration: none;
+				&:hover { border-width: 1px }
+				}
+			}
+		}
+
+* 4.函数与运算
+
+		@the-border: 1px;
+		@base-color: #111;
+		@red:        #842210;
+
+		#header {
+		color: @base-color * 3;
+		border-left: @the-border;
+		border-right: @the-border * 2;
+		}
+		#footer { 
+		color: @base-color + #003300;
+		border-color: desaturate(@red, 10%);
+		}
+
+* 5.js表达式
+
+		@var: `"hello".toUpperCase() + '!'`;
